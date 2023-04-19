@@ -1,11 +1,12 @@
-# Getting Started with Create React App
+# 开始学习react的代码
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+## 启动项目的命令
 ### `npm start`
 
 Runs the app in the development mode.\
