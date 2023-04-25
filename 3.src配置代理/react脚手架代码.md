@@ -16,7 +16,7 @@
 > 创建一个setupProxy.js文件
 配置内容如下
 
-```json
+```js
 const {createProxyMiddleware} = require('http-proxy-middleware')
 
 // 注意这里的写法，必须是写成这个样子不然会报错
