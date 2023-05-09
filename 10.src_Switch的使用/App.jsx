@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { NavLink, Route, Switch , Redirect} from 'react-router-dom'
+import { NavLink, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home' // 路由组件
 import About from './pages/About' // 路由组件
 import Header from './components/Header' // 一般组件
 import MyNavLink from './components/MyNavLink'
+import Test from './pages/Test'
 
 
 export default class App extends Component {
@@ -36,9 +37,9 @@ export default class App extends Component {
               <div className='panel-body'>
                 {/* 注册路由--用switch包裹,匹配到就返回,通常一个路由对应一个组件 */}
                 <Switch>
-                  <Route  path="/about" component={About} />
-                  <Route  path="/home" component={Home} />
-                  <Redirect to="/home"></Redirect>
+                  <Route path="/about" component={About} />
+                  <Route path="/home" component={Home} />
+                  <Route path="/home" component={Test} />
                 </Switch>
 
               </div>
