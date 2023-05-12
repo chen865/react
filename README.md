@@ -108,3 +108,16 @@ match:
 - 接收参数： `const {id,title} = this.props.location.search;`
 - 备注：获取到`search`是`urlencoded`编码的字符串，需要用querystring解析，引入方式`import qs from 'qs'`
 3. state参数
+- 路由链接(携带参数)：` <Link to={{pathname:'/home/message/detail',state:{name:'tom',id:1}}}>详情数据</Link>`
+- 注册路由(接收参数): `<Route path="/home/message/detail" component={Detail}></Route>`
+- 接收参数： `const {id,title} = this.props.location.state;`
+- 备注：刷新也可以保留住参数
+
+
+### 十二、编程式路由导航
+借助`this.props.history`对象上的`api`对操作路由跳转,前进,后退
+- this.props.history.push()  记录历史
+- this.props.history.replace()  不记录
+- this.props.history.goBack()  返回
+- this.props.history.goForward()  前进
+- this.props.history.go()  前进(正数)或后退(负数)n步
