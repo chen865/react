@@ -121,3 +121,30 @@ match:
 - this.props.history.goBack()  返回
 - this.props.history.goForward()  前进
 - this.props.history.go()  前进(正数)或后退(负数)n步
+
+
+### 十三、BrowserRouter与HashRouter的区别
+1. 底层原理不一样:
+        `BrowserRouter`使用的是`h5`的`history api`，不兼容ie9及以下版本
+        `HashRouter`使用的是`url`的哈希值
+2. path表现形式不一样
+        `BrowserRouter`的路径中没有`#`，`eg:http://localhost:3000/demo/test`
+        `HashRouter`的路径包含`#`,`eg:http://localhost:3000/#/demo/test`
+3. 刷新后对路由`state`参数的影响
+        (1).`BrowserRouter`没有任何影响，因为`state`保存在`history`对象里
+        (2).`HashRouter`刷新后会导致路由`state`参数的丢失
+4. 备注:`HashRouter`可以用于解决一些路径错误相关的问题
+
+### 十四、antd的引入
+1. 安装依赖:`npm add react-app-rewired`
+2. 修改`package.json`
+```
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
+  },
+```
+3. 根目录创建craco.config.js（5.0版本）
+
+
